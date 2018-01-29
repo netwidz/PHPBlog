@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `post` (
+  `post_id` int(6) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NULL DEFAULT '',
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `short_description` VARCHAR(500) NOT NULL DEFAULT '',
+  `long_description` LONGTEXT NOT NULL DEFAULT '',
+  `date_posted` date NOT NULL DEFAULT '0000-00-00',
+  PRIMARY KEY (`post_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+
+CREATE TABLE IF NOT EXISTS `comment` (
+  `comment_id` int(6) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NULL DEFAULT '',
+`email` varchar(255) NULL DEFAULT '',
+`comment` varchar(500) NULL DEFAULT '',
+  `date_commented` date NOT NULL DEFAULT '0000-00-00',
+`post_id` int(6) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`comment_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
